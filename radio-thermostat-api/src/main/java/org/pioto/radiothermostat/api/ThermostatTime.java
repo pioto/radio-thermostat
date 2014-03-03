@@ -16,23 +16,39 @@
 
 package org.pioto.radiothermostat.api;
 
+import java.io.Serializable;
+
 /**
- * Represents the current operating state of the thermostat.
+ * Interface representing the time, as tracked by the thermostat.
+ * <p/>
+ * The thermostat only tracks the day of the week, and the current hour/minute
+ * of the day.
  *
  * @author Mike Kelly (pioto@pioto.org)
  *
  */
-public enum ThermostatState {
+public interface ThermostatTime extends Serializable,
+		Comparable<ThermostatTime> {
+
 	/**
-	 * The thermostat is off.
+	 * The day of the week this time represents.
+	 *
+	 * @return the day of the week
 	 */
-	OFF,
+	DayOfWeek getDay();
+
 	/**
-	 * The thermostat is calling for heat.
+	 * The hour of the day this time represents, in hours since midnight. (e.g.
+	 * {@code 0} = "12 AM", {@code 13} = "1PM")
+	 *
+	 * @return the hour
 	 */
-	HEAT,
+	Integer getHour();
+
 	/**
-	 * The thermostat is calling for cooling.
+	 * The number of minutes past the hour for this time.
+	 *
+	 * @return the minutes
 	 */
-	COOL
+	Integer getMinutes();
 }

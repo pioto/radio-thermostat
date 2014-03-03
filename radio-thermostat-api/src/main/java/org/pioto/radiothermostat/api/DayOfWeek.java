@@ -17,22 +17,11 @@
 package org.pioto.radiothermostat.api;
 
 /**
- * Represents the current operating state of the thermostat.
+ * The day of the week represented by a ThermostatTime.
  *
  * @author Mike Kelly (pioto@pioto.org)
  *
  */
-public enum ThermostatState {
-	/**
-	 * The thermostat is off.
-	 */
-	OFF,
-	/**
-	 * The thermostat is calling for heat.
-	 */
-	HEAT,
-	/**
-	 * The thermostat is calling for cooling.
-	 */
-	COOL
+public enum DayOfWeek {
+	MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
 }

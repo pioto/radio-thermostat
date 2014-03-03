@@ -17,6 +17,10 @@
 /**
  * This package contains interfaces for a public API for the
  * <a href="http://www.radiothermostat.com/latestnews.html#advanced">Radio Thermostat</a>.
+ * <p/>
+ * The main interface for interacting with the thermostat is the
+ * {@link org.pioto.radiothermostat.api.Thermostat} interface. Implementations
+ * should register as an OSGi service.
  *
  * @author Mike Kelly (pioto@pioto.org)
  */
