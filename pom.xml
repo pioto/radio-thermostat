@@ -63,6 +63,11 @@
 					<artifactId>maven-javadoc-plugin</artifactId>
 					<version>2.9.1</version>
 				</plugin>
+				<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-bundle-plugin</artifactId>
+					<version>2.4.0</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 
@@ -100,4 +105,7 @@
 		</plugins>
 	</reporting>
 
+	<modules>
+		<module>radio-thermostat-api</module>
+	</modules>
 </project>
